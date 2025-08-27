@@ -7,9 +7,7 @@ const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
 
-app.use(cors({
-    origin: ["https://logmanager-q2j97apcg-yustin1999s-projects.vercel.app/"]
-}));
+app.use(cors());
 
 
 app.get('/api/folder/:folderName/logs', async (req, res) => {
