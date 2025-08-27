@@ -8,7 +8,7 @@ const fetch = require("node-fetch");
 const app = express();
 
 app.use(cors({
-    origin: ["https://logmanager-oxax0nglc-yustin1999s-projects.vercel.app/"]
+    origin: ["https://logmanager-oxax0nglc-yustin1999s-projects.vercel.app"]
 }));
 
 
