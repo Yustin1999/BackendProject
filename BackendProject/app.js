@@ -6,7 +6,7 @@ const path = require("path")
 const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
-const PORT = 4000;
+
 app.use(cors({
     origin: ["https://logmanager-oxax0nglc-yustin1999s-projects.vercel.app/"]
 }));
