@@ -44,7 +44,7 @@ app.get('/api/folder/:folderName/:filename', async (req, res) => {
     const repoOwner = 'Yustin1999';
     const repoName = 'LogFiles';
     const branch = 'main';
-    const folderUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}/${filename}?ref=${branch}`;
+    const folderUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/Logs/${folderName}/${filename}`;
 
     try {
         const response = await fetch(folderUrl)
