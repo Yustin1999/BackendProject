@@ -1,5 +1,5 @@
 
-//import { fileURLToPath } from "url";
+
 
 const express = require("express")
 const path = require("path")
@@ -7,8 +7,8 @@ const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
 const Database = require("better-sqlite3");
-const db = new Database("./data/userdata.db");
-console.log("Connected to SQLite database.");
+//const db = new Database("./data/userdata.db");
+//console.log("Connected to SQLite database.");
 app.use(cors());
 
 
