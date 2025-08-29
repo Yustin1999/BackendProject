@@ -7,9 +7,11 @@ const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
 const Database = require("better-sqlite3");
-//const db = new Database("./data/userdata.db");
-//console.log("Connected to SQLite database.");
 app.use(cors());
+app.use(express.json());
+
+
+
 
 
 app.get('/api/folder/:folderName/logs', async (req, res) => {
@@ -64,6 +66,41 @@ app.get('/api/folder/:folderName/:filename', async (req, res) => {
    
 });
 const PORT = process.env.PORT || 4000;
+
+app.get('/api/userdata', (req, res) => {
+    const db = new Database("./Data/userdata.db");
+    const rows = db.prepare("SELECT * FROM userdata").all();
+    res.json(rows);
+    db.close();
+}); 
+app.post('/api/updateUser', (req, res) => {
+    const db = new Database("./Data/userdata.db");
+    const { id, authorization } = req.body; // data from frontend
+    console.error(req.body)
+    if (id === undefined || authorization === undefined) {
+        return res.status(400).json({ error: "Missing id or authorised" });
+    }
+
+    try {
+        const db = new Database("./Data/userdata.db");
+
+        // UPDATE statement
+        const stmt = db.prepare("UPDATE userdata SET authorization = ? WHERE id = ?");
+        const info = stmt.run(authorization, id); // run the update
+
+        db.close();
+
+        // info.changes tells you how many rows were updated
+        if (info.changes === 0) {
+            return res.status(404).json({ error: "No row found with this id" });
+        }
+
+        res.json({ success: true, changes: info.changes });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Database error" });
+    }
+}); 
 
 app.listen(PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`);
