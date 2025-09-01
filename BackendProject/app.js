@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 
-
+//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
 
 app.get('/api/folder/:folderName/logs', async (req, res) => {
     const folderName = req.params.folderName;
@@ -21,7 +21,14 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
     const branch = 'main';
     const folderPath = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}?ref=${branch}`;
     try {
-        const response = await fetch(folderPath);
+        const response = await fetch(folderPath, {
+            headers: {
+                'User-Agent': 'Node.js',
+                'Accept': 'application/vnd.github.v3+json',
+                'Authorization': `token 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`
+            }
+        });
+    });
         if (!response.ok) {
             const text = await response.text();
             console.error('GitHub API error response:', text);
