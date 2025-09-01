@@ -22,7 +22,10 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
     const folderPath = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}?ref=${branch}`;
     try {
         const response = await fetch(folderPath);
-        if (!response.ok) return res.status(500).json({ error: 'Cannot fetch folder from GitHub' });
+        if (!response.ok) {
+            const text = await response.text();
+            console.error('GitHub API error response:', text);
+        }
         const files = await response.json();
         const txtFiles = files
             .filter(file => file.type === 'file' && path.extname(file.name).toLowerCase() === '.txt')
