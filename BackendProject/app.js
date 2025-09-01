@@ -26,7 +26,7 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
             headers: {
                 'User-Agent': 'Node.js',
                 'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `Bearer ${GITHUB_TOKEN}`
+                'Authorization': `token ${GITHUB_TOKEN}`
             }
         });
         
