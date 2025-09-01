@@ -9,10 +9,10 @@ const app = express();
 const Database = require("better-sqlite3");
 app.use(cors());
 app.use(express.json());
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 
 
-//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
 
 app.get('/api/folder/:folderName/logs', async (req, res) => {
     const folderName = req.params.folderName;
@@ -25,7 +25,7 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
             headers: {
                 'User-Agent': 'Node.js',
                 'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `token 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`
+                'Authorization': `token ${GITHUB_TOKEN}`
             }
         });
     });
