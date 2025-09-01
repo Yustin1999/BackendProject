@@ -73,6 +73,12 @@ app.get('/api/userdata', (req, res) => {
     res.json(rows);
     db.close();
 }); 
+app.get('/api/userLogData', (req, res) => {
+    const db = new Database("./Data/userlogs.db");
+    const rows = db.prepare("SELECT * FROM userlog").all();
+    res.json(rows);
+    db.close();
+});
 app.post('/api/updateUser', (req, res) => {
     const db = new Database("./Data/userdata.db");
     const { id, authorization } = req.body; // data from frontend
@@ -101,6 +107,29 @@ app.post('/api/updateUser', (req, res) => {
         res.status(500).json({ error: "Database error" });
     }
 }); 
+
+app.post('/api/userLog', (req, res) => {
+    const db = new Database("./Data/userlogs.db");
+    const { username, email, prevAuth, currentAuth } = req.body;
+    console.log("Request body:", req.body);
+
+    if (!username || !email || !prevAuth || !currentAuth) {
+        return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    try {
+        const stmt = db.prepare(`
+            INSERT INTO userlog (username, email, prevAuth, currentAuth) 
+            VALUES (?, ?, ?, ?)
+        `);
+        const info = stmt.run(username, email, prevAuth, currentAuth);
+
+        res.json({ success: true, insertedId: info.lastInsertRowid });
+    } catch (err) {
+        console.error("Database error:", err);
+        res.status(500).json({ error: "Database error" });
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`);

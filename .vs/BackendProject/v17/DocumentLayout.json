@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\",
+  "WorkspaceRootPath": "C:\\Users\\Justi\\source\\repos\\BackendProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\data\\create-db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\data\\create-db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,41 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "create-db.js",
+              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\create-db.js",
+              "RelativeDocumentMoniker": "BackendProject\\Data\\create-db.js",
+              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\create-db.js",
+              "RelativeToolTip": "BackendProject\\Data\\create-db.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-01T09:40:02.435Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package.json",
+              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package.json",
               "RelativeDocumentMoniker": "BackendProject\\package.json",
-              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package.json",
+              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package.json",
               "RelativeToolTip": "BackendProject\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-27T09:44:37.821Z"
+              "WhenOpened": "2025-08-27T09:44:37.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "package-lock.json",
-              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package-lock.json",
+              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package-lock.json",
               "RelativeDocumentMoniker": "BackendProject\\package-lock.json",
-              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package-lock.json",
+              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package-lock.json",
               "RelativeToolTip": "BackendProject\\package-lock.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-27T09:36:28.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
+              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
               "RelativeDocumentMoniker": "BackendProject\\app.js",
-              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
+              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
               "RelativeToolTip": "BackendProject\\app.js",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFcAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-08-27T09:35:54.025Z",
               "EditorCaption": ""
