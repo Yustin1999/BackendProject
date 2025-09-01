@@ -28,7 +28,7 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
                 'Authorization': `token ${GITHUB_TOKEN}`
             }
         });
-    });
+    
         if (!response.ok) {
             const text = await response.text();
             console.error('GitHub API error response:', text);
