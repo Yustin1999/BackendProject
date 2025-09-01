@@ -23,11 +23,11 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
     const folderPath = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}?ref=${branch}`;
     try {
         const response = await fetch(folderPath, {
-            headers: {
+            /*headers: {
                 'User-Agent': 'Node.js',
                 'Accept': 'application/vnd.github.v3+json',
                 'Authorization': `token ${GITHUB_TOKEN}`
-            }
+            }*/
         });
         
         if (!response.ok) {
