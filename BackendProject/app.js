@@ -9,8 +9,9 @@ const app = express();
 const Database = require("better-sqlite3");
 app.use(cors());
 app.use(express.json());
+require('dotenv').config();
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-
+console.log(GITHUB_TOKEN)
 
 
 
@@ -25,13 +26,14 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
             headers: {
                 'User-Agent': 'Node.js',
                 'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `token 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`
+                'Authorization': `Bearer ${GITHUB_TOKEN}`
             }
         });
-    
+        
         if (!response.ok) {
             const text = await response.text();
             console.error('GitHub API error response:', text);
+            return res.status(response.status).json({ error: text });
         }
         const files = await response.json();
         const txtFiles = files
