@@ -16,5 +16,7 @@
     <PackageJsonDependenciesDotenv Condition="$(PackageJsonDependenciesDotenv) == ''">^17.2.1</PackageJsonDependenciesDotenv>
     <PackageJsonDependenciesExpress Condition="$(PackageJsonDependenciesExpress) == ''">^5.1.0</PackageJsonDependenciesExpress>
     <PackageJsonDependenciesNodeFetch Condition="$(PackageJsonDependenciesNodeFetch) == ''">^2.7.0</PackageJsonDependenciesNodeFetch>
+    <PackageJsonDependenciesPg Condition="$(PackageJsonDependenciesPg) == ''">^8.16.3</PackageJsonDependenciesPg>
+    <PackageJsonDependenciesPostgres Condition="$(PackageJsonDependenciesPostgres) == ''">^3.4.7</PackageJsonDependenciesPostgres>
   </PropertyGroup>
 </Project>
