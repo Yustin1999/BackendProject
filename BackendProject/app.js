@@ -9,7 +9,7 @@ const app = express();
 const Database = require("better-sqlite3");
 app.use(cors());
 app.use(express.json());
-
+const db = sql(process.env.CONNECTION_STRING);
 
 
 
@@ -86,7 +86,7 @@ const PORT = process.env.PORT || 4000;
 });*/
 
 app.get('/api/userdata', async (req, res) => {
-    const db = sql(process.env.CONNECTION_STRING); 
+    
 
     try {
         const users = await db`SELECT * FROM users
@@ -106,7 +106,7 @@ app.get('/api/userdata', async (req, res) => {
     db.close();
 });*/
 app.get('/api/userLogData', async (req, res) => {
-    const db = sql(process.env.CONNECTION_STRING);
+    
 
     try {
         const logs = await db`SELECT * FROM userlog;`;
@@ -147,7 +147,7 @@ app.get('/api/userLogData', async (req, res) => {
     }
 }); */
 app.post('/api/updateUser', async (req, res) => {
-    const db = sql(process.env.CONNECTION_STRING);
+    
     const { id, is_authorised } = req.body;
     console.log(req.body)
     if (id === undefined || is_authorised === undefined) {
@@ -197,7 +197,7 @@ app.post('/api/updateUser', async (req, res) => {
     }
 });*/
 app.post('/api/userLog', async (req, res) => {
-    const db = sql(process.env.CONNECTION_STRING);
+    
     const { username, email, prevAuth, currentAuth } = req.body;
 
     if (username === undefined || email === undefined || prevAuth === undefined || currentAuth === undefined) {
