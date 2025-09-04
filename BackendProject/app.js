@@ -1,6 +1,6 @@
 
-
-
+require('dotenv').config();
+const sql = require('postgres')
 const express = require("express")
 const path = require("path")
 const cors = require("cors")
@@ -9,9 +9,8 @@ const app = express();
 const Database = require("better-sqlite3");
 app.use(cors());
 app.use(express.json());
-require('dotenv').config();
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-console.log(GITHUB_TOKEN)
+
+
 
 
 
@@ -79,19 +78,47 @@ app.get('/api/folder/:folderName/:filename', async (req, res) => {
 });
 const PORT = process.env.PORT || 4000;
 
-app.get('/api/userdata', (req, res) => {
+/*app.get('/api/userdata', (req, res) => {
     const db = new Database("./Data/userdata.db");
     const rows = db.prepare("SELECT * FROM userdata").all();
     res.json(rows);
     db.close();
-}); 
-app.get('/api/userLogData', (req, res) => {
+});*/
+
+app.get('/api/userdata', async (req, res) => {
+    const db = sql(process.env.CONNECTION_STRING); 
+
+    try {
+        const users = await db`SELECT * FROM users
+            ORDER BY id ASC;  -- ascending order by ID
+        ;`; 
+        res.json(users); 
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Database query failed' });
+    }
+});
+
+/*app.get('/api/userLogData', (req, res) => {
     const db = new Database("./Data/userlogs.db");
     const rows = db.prepare("SELECT * FROM userlog").all();
     res.json(rows);
     db.close();
+});*/
+app.get('/api/userLogData', async (req, res) => {
+    const db = sql(process.env.CONNECTION_STRING);
+
+    try {
+        const logs = await db`SELECT * FROM userlog;`;
+        res.json(logs);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Database query failed' });
+    }
 });
-app.post('/api/updateUser', (req, res) => {
+
+
+/*app.post('/api/updateUser', (req, res) => {
     const db = new Database("./Data/userdata.db");
     const { id, authorization } = req.body; // data from frontend
     console.error(req.body)
@@ -118,9 +145,36 @@ app.post('/api/updateUser', (req, res) => {
         console.error(err);
         res.status(500).json({ error: "Database error" });
     }
-}); 
+}); */
+app.post('/api/updateUser', async (req, res) => {
+    const db = sql(process.env.CONNECTION_STRING);
+    const { id, is_authorised } = req.body;
+    console.log(req.body)
+    if (id === undefined || is_authorised === undefined) {
+        return res.status(400).json({ error: "Missing id or authorization" });
+    }
 
-app.post('/api/userLog', (req, res) => {
+    try {
+        // UPDATE statement
+        const result = await db`
+            UPDATE users
+            SET is_authorised = ${is_authorised}
+            WHERE id = ${id}
+            RETURNING *;
+        `;
+
+        if (result.length === 0) {
+            return res.status(404).json({ error: "No row found with this id" });
+        }
+
+        res.json({ success: true, updated: result[0] });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Database error" });
+    }
+});
+
+/*app.post('/api/userLog', (req, res) => {
     const db = new Database("./Data/userlogs.db");
     const { username, email, prevAuth, currentAuth } = req.body;
     console.log("Request body:", req.body);
@@ -139,6 +193,32 @@ app.post('/api/userLog', (req, res) => {
         res.json({ success: true, insertedId: info.lastInsertRowid });
     } catch (err) {
         console.error("Database error:", err);
+        res.status(500).json({ error: "Database error" });
+    }
+});*/
+app.post('/api/userLog', async (req, res) => {
+    const db = sql(process.env.CONNECTION_STRING);
+    const { username, email, prevAuth, currentAuth } = req.body;
+
+    if (username === undefined || email === undefined || prevAuth === undefined || currentAuth === undefined) {
+        return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    try {
+        // UPDATE statement
+        const result = await db`
+            INSERT INTO userlog (username, email, prev_auth, current_auth)
+            VALUES(${username},${email},${prevAuth},${currentAuth})
+            RETURNING *;
+        `;
+
+        if (result.length === 0) {
+            return res.status(404).json({ error: "No row found with this id" });
+        }
+
+        res.json({ success: true, updated: result[0] });
+    } catch (err) {
+        console.error(err);
         res.status(500).json({ error: "Database error" });
     }
 });
