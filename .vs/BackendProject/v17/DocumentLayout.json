@@ -1,26 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Justi\\source\\repos\\BackendProject\\",
+  "WorkspaceRootPath": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\data\\variables.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\data\\variables.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\data\\create-db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justinsummers\\documents\\github\\backendproject\\backendproject\\data\\create-db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\data\\create-db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\variables.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,23 +33,23 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "variables.env",
               "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\variables.env",
-              "RelativeDocumentMoniker": "BackendProject\\Data\\variables.env",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\variables.env",
               "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\variables.env",
-              "RelativeToolTip": "BackendProject\\Data\\variables.env",
+              "RelativeToolTip": "..\\..\\..\\..\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\variables.env",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-09-01T17:58:12.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "create-db.js",
-              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\create-db.js",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\Data\\create-db.js",
               "RelativeDocumentMoniker": "BackendProject\\Data\\create-db.js",
-              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\create-db.js",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\Data\\create-db.js",
               "RelativeToolTip": "BackendProject\\Data\\create-db.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -58,11 +57,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package.json",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package.json",
               "RelativeDocumentMoniker": "BackendProject\\package.json",
-              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package.json",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package.json",
               "RelativeToolTip": "BackendProject\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -70,11 +69,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "package-lock.json",
-              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package-lock.json",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package-lock.json",
               "RelativeDocumentMoniker": "BackendProject\\package-lock.json",
-              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\package-lock.json",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\package-lock.json",
               "RelativeToolTip": "BackendProject\\package-lock.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -84,11 +83,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
               "RelativeDocumentMoniker": "BackendProject\\app.js",
-              "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
               "RelativeToolTip": "BackendProject\\app.js",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-08-27T09:35:54.025Z",
               "EditorCaption": ""
