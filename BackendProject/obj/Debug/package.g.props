@@ -11,10 +11,12 @@
     <PackageJsonAuthor Condition="$(PackageJsonAuthor) == ''"></PackageJsonAuthor>
     <PackageJsonLicense Condition="$(PackageJsonLicense) == ''">ISC</PackageJsonLicense>
     <PackageJsonDevdependenciesEslint Condition="$(PackageJsonDevdependenciesEslint) == ''">^9.34.0</PackageJsonDevdependenciesEslint>
+    <PackageJsonDependenciesBcrypt Condition="$(PackageJsonDependenciesBcrypt) == ''">^6.0.0</PackageJsonDependenciesBcrypt>
     <PackageJsonDependenciesBetterSqlite3 Condition="$(PackageJsonDependenciesBetterSqlite3) == ''">^12.2.0</PackageJsonDependenciesBetterSqlite3>
     <PackageJsonDependenciesCors Condition="$(PackageJsonDependenciesCors) == ''">^2.8.5</PackageJsonDependenciesCors>
     <PackageJsonDependenciesDotenv Condition="$(PackageJsonDependenciesDotenv) == ''">^17.2.1</PackageJsonDependenciesDotenv>
     <PackageJsonDependenciesExpress Condition="$(PackageJsonDependenciesExpress) == ''">^5.1.0</PackageJsonDependenciesExpress>
+    <PackageJsonDependenciesJsonwebtoken Condition="$(PackageJsonDependenciesJsonwebtoken) == ''">^9.0.2</PackageJsonDependenciesJsonwebtoken>
     <PackageJsonDependenciesNodeFetch Condition="$(PackageJsonDependenciesNodeFetch) == ''">^2.7.0</PackageJsonDependenciesNodeFetch>
     <PackageJsonDependenciesPg Condition="$(PackageJsonDependenciesPg) == ''">^8.16.3</PackageJsonDependenciesPg>
     <PackageJsonDependenciesPostgres Condition="$(PackageJsonDependenciesPostgres) == ''">^3.4.7</PackageJsonDependenciesPostgres>

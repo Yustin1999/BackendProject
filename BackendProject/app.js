@@ -7,6 +7,8 @@ const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
 const Database = require("better-sqlite3");
+const db = new Database('./users.db');
+
 app.use(cors());
 app.use(express.json());
 
@@ -174,6 +176,37 @@ app.post('/api/updateUser', async (req, res) => {
     }
 });
 
+
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    const user = db.prepare("SELECT * FROM users WHERE email = ?").get(email);
+    if (!user) return res.status(401).json({ error: "Invalid credentials" });
+
+    const valid = await bcrypt.compare(password, user.password_hash);
+    if (!valid) return res.status(401).json({ error: "Invalid credentials" });
+
+    // Generate JWT
+    const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
+        expiresIn: "1h",
+    });
+
+    res.json({ token });
+});
+
+
+app.get("/profile", (req, res) => {
+    const authHeader = req.headers["authorization"];
+    if (!authHeader) return res.sendStatus(401);
+
+    const token = authHeader.split(" ")[1];
+    try {
+        const payload = jwt.verify(token, JWT_SECRET);
+        res.json({ message: "Secure data", user: payload });
+    } catch {
+        res.sendStatus(403);
+    }
+});
 /*app.post('/api/userLog', (req, res) => {
     const db = new Database("./Data/userlogs.db");
     const { username, email, prevAuth, currentAuth } = req.body;

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Justi\\source\\repos\\BackendProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|solutionrelative:backendproject\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{792E045E-CED4-0194-CAB3-75D62C470EA5}|BackendProject\\BackendProject.esproj|c:\\users\\justi\\source\\repos\\backendproject\\backendproject\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,19 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\.env",
               "RelativeDocumentMoniker": "BackendProject\\.env",
               "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\.env",
               "RelativeToolTip": "BackendProject\\.env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-01T17:58:12.9Z"
+              "WhenOpened": "2025-09-01T17:58:12.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
               "RelativeDocumentMoniker": "BackendProject\\app.js",
               "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
               "RelativeToolTip": "BackendProject\\app.js",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-08-27T09:35:54.025Z",
               "EditorCaption": ""
