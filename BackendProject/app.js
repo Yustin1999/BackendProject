@@ -1,4 +1,4 @@
-
+const fs = require("fs")
 require('dotenv').config();
 const sql = require('postgres')
 const express = require("express")
@@ -6,30 +6,40 @@ const path = require("path")
 const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
-const Database = require("better-sqlite3");
-const db = new Database('./users.db');
-
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken")
 app.use(cors());
 app.use(express.json());
 const db = sql(process.env.CONNECTION_STRING);
+const JWT_SECRET = process.env.JWT_SECRET
 
 
 
 
-app.get('/api/folder/:folderName/logs', async (req, res) => {
+
+app.get('/api/folder/:folderName/logs', (req, res) => {
+    const folderName = req.params.folderName;
+    try {
+        
+        const data = JSON.parse(fs.readFileSync("./Data/files_cache.json", "utf8"));
+        const folder1Files = data[folderName];
+        console.log(folder1Files);
+
+        
+        res.json(folder1Files);
+    } catch (err) {
+        console.error("Error reading cache:", err);
+        res.status(500).json({ error: "Failed to read cached file list" });
+    }
+});
+/*app.get('/api/folder/:folderName/logs', async (req, res) => {
     const folderName = req.params.folderName;
     const repoOwner = 'Yustin1999';
     const repoName = 'LogFiles';
     const branch = 'main';
     const folderPath = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}?ref=${branch}`;
     try {
-        const response = await fetch(folderPath, {
-            /*headers: {
-                'User-Agent': 'Node.js',
-                'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `token ${GITHUB_TOKEN}`
-            }*/
-        });
+        const response = await fetch(folderPath);
         
         if (!response.ok) {
             const text = await response.text();
@@ -49,7 +59,7 @@ app.get('/api/folder/:folderName/logs', async (req, res) => {
         res.status(500).json({ error: 'Error fetching folder contents' });
     }
 
-});
+});*/
 
 
 
@@ -177,36 +187,64 @@ app.post('/api/updateUser', async (req, res) => {
 });
 
 
-app.post("/login", async (req, res) => {
+app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
-
-    const user = db.prepare("SELECT * FROM users WHERE email = ?").get(email);
-    if (!user) return res.status(401).json({ error: "Invalid credentials" });
-
-    const valid = await bcrypt.compare(password, user.password_hash);
-    if (!valid) return res.status(401).json({ error: "Invalid credentials" });
-
-    // Generate JWT
-    const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
-        expiresIn: "1h",
-    });
-
-    res.json({ token });
-});
-
-
-app.get("/profile", (req, res) => {
-    const authHeader = req.headers["authorization"];
-    if (!authHeader) return res.sendStatus(401);
-
-    const token = authHeader.split(" ")[1];
-    try {
-        const payload = jwt.verify(token, JWT_SECRET);
-        res.json({ message: "Secure data", user: payload });
-    } catch {
-        res.sendStatus(403);
+    if (email === undefined || password === undefined) {
+        return res.status(400).json({ error: "Invalid credentials" });
     }
+    try {
+        const user = await db`
+          SELECT id, email, password
+          FROM userlogin
+          WHERE email = ${email}
+          LIMIT 1
+        `;
+       const valid = await bcrypt.compare(password, user[0].password);
+        if (!valid) {
+            return { success: false, message: 'Invalid credentials' };
+        } 
+        const token = jwt.sign({ id: user[0].id, email: user[0].email }, JWT_SECRET, {
+            expiresIn: "10m",
+        });
+        res.json({ token });
+        console.log("Generated token:", token);    
+        
+
+        
+        
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error" });
+    }
+
 });
+
+/*app.get("/api/JWTcheck", authenticateToken, async (req, res) => {
+    console.log('Decoded JWT payload:', req.user);
+
+    try {
+        // Use values from the token
+        const user = await db`
+      SELECT id, email
+      FROM userlogin
+      WHERE id = ${req.user.id}
+      LIMIT 1
+    `;
+
+        if (!user || user.length === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.json({
+            id: user[0].id,
+            email: user[0].email
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error" });
+    }
+});*/
+
 /*app.post('/api/userLog', (req, res) => {
     const db = new Database("./Data/userlogs.db");
     const { username, email, prevAuth, currentAuth } = req.body;
