@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "BackendProject\\Data\\files_cache.json",
               "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\Data\\files_cache.json",
               "RelativeToolTip": "BackendProject\\Data\\files_cache.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-23T13:46:33.439Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "BackendProject\\Data\\DataCache.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-23T13:13:17.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T13:13:17.941Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "BackendProject\\.env",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-22T09:03:05.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T09:03:05.043Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "BackendProject\\app.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-22T17:44:21.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T17:44:21.865Z"
             }
           ]
         }
