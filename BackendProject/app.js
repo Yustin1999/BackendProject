@@ -123,6 +123,7 @@ app.get('/api/userLogData', async (req, res) => {
     try {
         const logs = await db`SELECT * FROM userlog;`;
         res.json(logs);
+        console.log(logs);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Database query failed' });
