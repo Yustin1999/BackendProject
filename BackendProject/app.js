@@ -14,9 +14,6 @@ const db = sql(process.env.CONNECTION_STRING);
 const JWT_SECRET = process.env.JWT_SECRET
 
 
-
-
-
 app.get('/api/folder/:folderName/logs', (req, res) => {
     const folderName = req.params.folderName;
     try {
@@ -119,11 +116,12 @@ app.get('/api/userdata', async (req, res) => {
 });*/
 app.get('/api/userLogData', async (req, res) => {
     
-
     try {
-        const logs = await db`SELECT * FROM userlog;`;
+        const logs = await db`SELECT * FROM userlog;
+            ORDER BY id ASC;  -- ascending order by ID
+            LIMIT 15
+        `;
         res.json(logs);
-        console.log(logs);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Database query failed' });
