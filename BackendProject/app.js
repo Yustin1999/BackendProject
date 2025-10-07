@@ -117,10 +117,10 @@ app.get('/api/userdata', async (req, res) => {
 app.get('/api/userLogData', async (req, res) => {
     
     try {
-        const logs = await db`SELECT * FROM userlog;
-            ORDER BY id ASC;  -- ascending order by ID
+        const logs = await db`SELECT * FROM userlog
+            ORDER BY created_at ASC
             LIMIT 15
-        `;
+        ;`;
         res.json(logs);
     } catch (err) {
         console.error(err);

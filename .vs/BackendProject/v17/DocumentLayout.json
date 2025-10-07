@@ -54,8 +54,7 @@
               "RelativeToolTip": "BackendProject\\Data\\test.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-06T12:52:15.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T12:52:15.769Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "BackendProject\\Data\\DataCache.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-23T13:13:17.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T13:13:17.941Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "BackendProject\\Data\\create-db.js",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-01T09:40:02.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T09:40:02.435Z"
             },
             {
               "$type": "Document",
@@ -117,8 +114,7 @@
               "RelativeToolTip": "BackendProject\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-27T09:44:37.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T09:44:37.821Z"
             },
             {
               "$type": "Document",
@@ -140,7 +136,7 @@
               "RelativeDocumentMoniker": "BackendProject\\app.js",
               "ToolTip": "C:\\Users\\Justi\\source\\repos\\BackendProject\\BackendProject\\app.js",
               "RelativeToolTip": "BackendProject\\app.js",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHkAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-09-22T17:44:21.865Z",
               "EditorCaption": ""
