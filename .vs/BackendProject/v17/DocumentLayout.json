@@ -45,21 +45,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\.gitignore",
-              "RelativeDocumentMoniker": "BackendProject\\.gitignore",
-              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\.gitignore",
-              "RelativeToolTip": "BackendProject\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-09T09:57:47.623Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -110,6 +97,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
+              "RelativeDocumentMoniker": "BackendProject\\app.js",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
+              "RelativeToolTip": "BackendProject\\app.js",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-22T17:44:21.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\.gitignore",
+              "RelativeDocumentMoniker": "BackendProject\\.gitignore",
+              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\.gitignore",
+              "RelativeToolTip": "BackendProject\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-09T09:57:47.623Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "create-db.js",
               "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\Data\\create-db.js",
@@ -143,19 +155,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-27T09:36:28.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
-              "RelativeDocumentMoniker": "BackendProject\\app.js",
-              "ToolTip": "C:\\Users\\JustinSummers\\Documents\\GitHub\\BackendProject\\BackendProject\\app.js",
-              "RelativeToolTip": "BackendProject\\app.js",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-22T17:44:21.865Z",
-              "EditorCaption": ""
             }
           ]
         }

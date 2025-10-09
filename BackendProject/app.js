@@ -7,7 +7,8 @@ const cors = require("cors")
 const fetch = require("node-fetch");
 const app = express();
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+const { group } = require("console");
 app.use(cors());
 app.use(express.json());
 const db = sql(process.env.CONNECTION_STRING);
@@ -34,8 +35,20 @@ app.get('/api/archive', (req, res) => {
     
     try {
         const data = JSON.parse(fs.readFileSync("./Data/files_cache.json", "utf8"));
-        res.json(data);
-        console.log(data);
+        const keys = Object.keys(data);
+        const groupedData = [];
+        const length = data[keys[0]].length; 
+        for (let i = 0; i < length; i++) {
+            const group = [];
+            for (let key of keys) {
+                group.push(data[key][i]);
+            }
+            groupedData.push(group);
+        }
+
+        res.json(groupedData);
+        //res.json(data);
+        console.log(groupedData);
     } catch (err) {
         console.error("Error reading cache:", err);
         res.status(500).json({ error: "Failed to read cached file list" });
