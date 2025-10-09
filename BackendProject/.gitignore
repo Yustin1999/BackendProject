@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional npm files
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Binary files
+*.node
+*.exe
+*.dll
+
+# Build output
+dist/
+build/

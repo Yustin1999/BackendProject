@@ -29,36 +29,17 @@ app.get('/api/folder/:folderName/logs', (req, res) => {
         res.status(500).json({ error: "Failed to read cached file list" });
     }
 });
-/*app.get('/api/folder/:folderName/logs', async (req, res) => {
-    const folderName = req.params.folderName;
-    const repoOwner = 'Yustin1999';
-    const repoName = 'LogFiles';
-    const branch = 'main';
-    const folderPath = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/Logs/${folderName}?ref=${branch}`;
+
+app.get('/api/archive', (req, res) => {
+    
     try {
-        const response = await fetch(folderPath);
-        
-        if (!response.ok) {
-            const text = await response.text();
-            console.error('GitHub API error response:', text);
-            return res.status(response.status).json({ error: text });
-        }
-        const files = await response.json();
-        const txtFiles = files
-            .filter(file => file.type === 'file' && path.extname(file.name).toLowerCase() === '.txt')
-            .map(file => ({
-                name: file.name,
-                download_url: file.download_url
-            }));
-        res.json(txtFiles)
+        const data = JSON.parse(fs.readFileSync("./Data/files_cache.json", "utf8"));
+        res.json(data);
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Error fetching folder contents' });
+        console.error("Error reading cache:", err);
+        res.status(500).json({ error: "Failed to read cached file list" });
     }
-
-});*/
-
-
+});
 
 app.get('/api/folder/:folderName/:filename', async (req, res) => {
     const folderName = req.params.folderName;
@@ -87,13 +68,6 @@ app.get('/api/folder/:folderName/:filename', async (req, res) => {
 });
 const PORT = process.env.PORT || 4000;
 
-/*app.get('/api/userdata', (req, res) => {
-    const db = new Database("./Data/userdata.db");
-    const rows = db.prepare("SELECT * FROM userdata").all();
-    res.json(rows);
-    db.close();
-});*/
-
 app.get('/api/userdata', async (req, res) => {
     
 
@@ -108,12 +82,6 @@ app.get('/api/userdata', async (req, res) => {
     }
 });
 
-/*app.get('/api/userLogData', (req, res) => {
-    const db = new Database("./Data/userlogs.db");
-    const rows = db.prepare("SELECT * FROM userlog").all();
-    res.json(rows);
-    db.close();
-});*/
 app.get('/api/userLogData', async (req, res) => {
     
     try {
@@ -128,35 +96,6 @@ app.get('/api/userLogData', async (req, res) => {
     }
 });
 
-
-/*app.post('/api/updateUser', (req, res) => {
-    const db = new Database("./Data/userdata.db");
-    const { id, authorization } = req.body; // data from frontend
-    console.error(req.body)
-    if (id === undefined || authorization === undefined) {
-        return res.status(400).json({ error: "Missing id or authorised" });
-    }
-
-    try {
-        const db = new Database("./Data/userdata.db");
-
-        // UPDATE statement
-        const stmt = db.prepare("UPDATE userdata SET authorization = ? WHERE id = ?");
-        const info = stmt.run(authorization, id); // run the update
-
-        db.close();
-
-        // info.changes tells you how many rows were updated
-        if (info.changes === 0) {
-            return res.status(404).json({ error: "No row found with this id" });
-        }
-
-        res.json({ success: true, changes: info.changes });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Database error" });
-    }
-}); */
 app.post('/api/updateUser', async (req, res) => {
     
     const { id, is_authorised } = req.body;
@@ -184,7 +123,6 @@ app.post('/api/updateUser', async (req, res) => {
         res.status(500).json({ error: "Database error" });
     }
 });
-
 
 app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
@@ -218,54 +156,6 @@ app.post('/api/login', async (req, res) => {
 
 });
 
-/*app.get("/api/JWTcheck", authenticateToken, async (req, res) => {
-    console.log('Decoded JWT payload:', req.user);
-
-    try {
-        // Use values from the token
-        const user = await db`
-      SELECT id, email
-      FROM userlogin
-      WHERE id = ${req.user.id}
-      LIMIT 1
-    `;
-
-        if (!user || user.length === 0) {
-            return res.status(404).json({ error: "User not found" });
-        }
-
-        res.json({
-            id: user[0].id,
-            email: user[0].email
-        });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Server error" });
-    }
-});*/
-
-/*app.post('/api/userLog', (req, res) => {
-    const db = new Database("./Data/userlogs.db");
-    const { username, email, prevAuth, currentAuth } = req.body;
-    console.log("Request body:", req.body);
-
-    if (!username || !email || !prevAuth || !currentAuth) {
-        return res.status(400).json({ error: "Missing required fields" });
-    }
-
-    try {
-        const stmt = db.prepare(`
-            INSERT INTO userlog (username, email, prevAuth, currentAuth) 
-            VALUES (?, ?, ?, ?)
-        `);
-        const info = stmt.run(username, email, prevAuth, currentAuth);
-
-        res.json({ success: true, insertedId: info.lastInsertRowid });
-    } catch (err) {
-        console.error("Database error:", err);
-        res.status(500).json({ error: "Database error" });
-    }
-});*/
 app.post('/api/userLog', async (req, res) => {
     
     const { username, email, prevAuth, currentAuth } = req.body;
