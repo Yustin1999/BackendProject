@@ -46,6 +46,7 @@ app.get('/api/archive', (req, res) => {
                 group.push(data[key][i]);
                 
             }
+           
             group.push(Dates(length - i));
             groupedData.push(group);
         }
