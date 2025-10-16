@@ -10,5 +10,5 @@ export default function Dates(x) {
 
     const formattedDate = `${day}/${month}/${year}`;
 
-    return { formattedDate };
+    return { formattedDate, state:false };
 }
